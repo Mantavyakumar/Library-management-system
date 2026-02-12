@@ -1,45 +1,32 @@
 from django.urls import path
 
 from .views import (
-    AddBookView,
-    AddMemberView,
-    BooksListView,
-    DeleteBookView,
-    DeleteBorrowedBookView,
-    DeleteMemberView,
-    DeletePaymentView,
     HomeView,
-    LendBookView,
-    LendMemberBookView,
-    LentBooksListView,
-    ListPaymentsView,
+    AddMemberView,
     MembersListView,
-    OverdueBooksView,
-    ReturnBookFineView,
+    AddBookView,
+    BooksListView,
+    LendBookView,
     ReturnBookView,
-    UpdateBookDetailsView,
-    UpdateBorrowedBookView,
-    UpdateMemberDetailsView,
+    ReturnBookFineView,LentBooksListView
 )
 
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
+
+    # MEMBER
     path("add-member/", AddMemberView.as_view(), name="add-member"),
     path("members/", MembersListView.as_view(), name="members"),
-    path("edit-member-details/<str:pk>/", UpdateMemberDetailsView.as_view(), name="update-member"),
-    path("delete-member/<str:pk>/", DeleteMemberView.as_view(), name="delete-member"),
+
+    # BOOK
     path("add-book/", AddBookView.as_view(), name="add-book"),
     path("books/", BooksListView.as_view(), name="books"),
-    path("edit-book-details/<str:pk>/", UpdateBookDetailsView.as_view(), name="update-book"),
-    path("delete-book/<str:pk>/", DeleteBookView.as_view(), name="delete-book"),
+
+    # ISSUE BOOK
     path("lend-book/", LendBookView.as_view(), name="lend-book"),
-    path("lend-book/<str:pk>/", LendMemberBookView.as_view(), name="lend-member-book"),
     path("lent-books/", LentBooksListView.as_view(), name="lent-books"),
-    path("edit-borrowed-book/<str:pk>/", UpdateBorrowedBookView.as_view(), name="edit-borrowed-book"),
-    path("delete-borrowed-book/<str:pk>/", DeleteBorrowedBookView.as_view(), name="delete-borrowed-book"),
+
+    # RETURN + FINE
     path("return-book/<str:pk>/", ReturnBookView.as_view(), name="return-book"),
     path("return-book-fine/<str:pk>/", ReturnBookFineView.as_view(), name="return-book-fine"),
-    path("payments/", ListPaymentsView.as_view(), name="payments"),
-    path("delete-payment/<str:pk>/", DeletePaymentView.as_view(), name="delete-payment"),
-    path("overdue-books/", OverdueBooksView.as_view(), name="overdue-books"),
 ]
