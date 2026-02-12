@@ -73,6 +73,7 @@ Then login at:
 http://127.0.0.1:8000/admin/
 📸 Screenshots
 Dashboard View
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/da4a7c00-ca62-410d-9267-6fdfb4fa3dac" />
 
 Add Member
 
