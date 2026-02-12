@@ -1,82 +1,95 @@
-# Library-Management-System-Django
-A Simple Library Management System that helps in managing a library.
+ # 📚 Library Management System
 
-### Available Functionalities:
-Definition: CRUD(Create, Read, Update and Delete)
-1. Members Management (Allows CRUD operations on Library Members)
-2. Books Management (Allows CRUD operations on Books)
-3. Lending of Books to Members.
-4. Returning of Books by Members.
-5. Payment for Borrowing A Book/Books by Members
-6. Payments for fines on overdue books By Members.
+A simple and efficient **Library Management System** built using **Django**.  
+This project allows an admin to manage members, books, book lending, and returns through an easy-to-use dashboard.
 
-### To run the project locally, follow the following instructions:
-- Clone the repository
-  ```sql
-  git clone https://github.com/hellen-22/Library-Management-System-Django.git
-  ```
-- Navigate to the project directory.
-  ```sql
-  cd Library-Management-System-Django
-  ```
-- Create virtual environment and activate it:
-  ```sql
-  python3 -m venv venv or python -m venv venv
-  ```
-  Activate: On Windows
-  ```sql
-  venv\Scripts\activate
-  ```
-  On Mac
-  ```sql
-  source venv\bin\activate
-  ```
-- Install libraries from the requirements.txt file.
-  ```sql
-  pip install -r requirement.txt
-  ```
-- Edit the *.env.sample* file to add your environment variables.
-- Set up the database:
-  ```sql
-  python manage.py migrate
-  ```
-- Run the server:
-  ```sql
-  python manage.py runserver
-  ```
+Developed by **Mantavya Kumar**
 
-### Hosted version
-Hosted version of the project: https://library-wnd0.onrender.com/
+---
 
-Use the following credentials:
-```sql
-Email: admin@gmail.com
-Password: Admin@LMS
-```
-Or register an account.
+## 🚀 Features
 
-### Screenshots
-Login and Register Pages.
-<img width="1440" alt="Screenshot 2024-02-15 at 11 57 31" src="https://github.com/hellen-22/Library-Management-System-Django/assets/58620060/5843a91c-c721-4a6d-bbbc-761c0ff6a713">
+- Admin Login Authentication
+- Add and Manage Members
+- Add and Manage Books
+- Issue (Lend) Books to Members
+- Return Books
+- Dashboard Statistics
+  - Total Members
+  - Total Books
+  - Borrowed Books
+  - Total Collection Amount
+- Recently Added Books Display
 
-<img width="1439" alt="Screenshot 2024-02-15 at 11 57 06" src="https://github.com/hellen-22/Library-Management-System-Django/assets/58620060/8ea7d534-8371-4e4c-afa1-1e62e4bd64f9">
+---
 
-Dashboard.
-<img width="1426" alt="Screenshot 2024-02-15 at 12 05 50" src="https://github.com/hellen-22/Library-Management-System-Django/assets/58620060/db263fab-8589-474f-8b09-fb781fcd466c">
+## 🛠️ Tech Stack
 
-Members Pages.
-<img width="1440" alt="Screenshot 2024-02-15 at 12 07 04" src="https://github.com/hellen-22/Library-Management-System-Django/assets/58620060/ffb20c12-8a48-46a5-88a4-64744e40cd40">
+- **Backend:** Python, Django
+- **Frontend:** HTML, CSS, Bootstrap
+- **Database:** SQLite
+- **Version Control:** Git & GitHub
 
-<img width="1424" alt="Screenshot 2024-02-15 at 12 06 48" src="https://github.com/hellen-22/Library-Management-System-Django/assets/58620060/26abb84b-0a3f-4e27-872f-b9a58e36f597">
+---
 
-Books Pages.
-<img width="1424" alt="Screenshot 2024-02-15 at 12 09 15" src="https://github.com/hellen-22/Library-Management-System-Django/assets/58620060/7e18dd67-229f-4456-8278-f1252d66d387">
+## 📂 Project Structure
 
-<img width="1423" alt="Screenshot 2024-02-15 at 12 08 49" src="https://github.com/hellen-22/Library-Management-System-Django/assets/58620060/74461a23-b1b9-4af8-a924-2d7312e4762f">
+Library-Management-System-Django/
+│
+├── core/ # Project settings
+├── library/ # Main app (models, views, urls)
+├── templates/ # HTML templates
+├── static/ # CSS & JS files
+├── manage.py
+└── requirements.txt
 
-Other Pages.
-<img width="1439" alt="Screenshot 2024-02-15 at 12 16 03" src="https://github.com/hellen-22/Library-Management-System-Django/assets/58620060/99f3dfc9-4136-4187-aa51-933a97ef161e">
 
-<img width="1423" alt="Screenshot 2024-02-15 at 12 13 50" src="https://github.com/hellen-22/Library-Management-System-Django/assets/58620060/643579b1-7811-44c4-a07a-03b5196ccbe5">
+---
 
-<img width="1425" alt="Screenshot 2024-02-15 at 12 18 37" src="https://github.com/hellen-22/Library-Management-System-Django/assets/58620060/91cc7d5c-a15c-4755-ad1b-b112fd098420">
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/Mantavyakumar/Library-management-system.git
+cd Library-management-system
+2️⃣ Create Virtual Environment
+python -m venv venv
+venv\Scripts\activate
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+4️⃣ Run Migrations
+python manage.py migrate
+5️⃣ Start Server
+python manage.py runserver
+Open browser:
+
+http://127.0.0.1:8000/
+🔐 Admin Login
+Create admin user:
+
+python manage.py createsuperuser
+Then login at:
+
+http://127.0.0.1:8000/admin/
+📸 Screenshots
+Dashboard View
+
+Add Member
+
+Add Book
+
+Lending Books
+
+Payments Overview
+
+✅ Future Improvements
+Automatic fine calculation
+
+Book search & filters
+
+Member borrowing history
+
+Email notifications
+
+👨‍💻 Author
+Mantavya Kumar
